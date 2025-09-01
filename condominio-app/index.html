@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Gestión Condominio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+      <span>EspacioAdmin</span>
+    </div>
+    <h1>SISTEMA DE GESTIÓN CONDOMINIO</h1>
+    <nav id="menu" class="hidden">
+      <button data-view="inicio" class="active">Inicio</button>
+      <button data-view="gastos">Gastos</button>
+      <button data-view="reservas">Reservas</button>
+      <button data-view="reportes">Reportes</button>
+      <button id="btnLogout">Salir</button>
+    </nav>
+  </header>
+
+  <!-- LOGIN -->
+  <main id="login">
+    <section class="card">
+      <h2>Iniciar Sesión</h2>
+      <form id="formLogin">
+        <label>Usuario
+          <input type="text" id="user" required placeholder="ej: admin" />
+        </label>
+        <label>Rol
+          <select id="role" required>
+            <option value="">Seleccione</option>
+            <option value="admin">Administrador</option>
+            <option value="conserje">Conserje</option>
+            <option value="directiva">Directiva</option>
+            <option value="residente">Residente</option>
+          </select>
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="errorMsg" class="error hidden">Usuario o rol inválido</p>
+    </section>
+  </main>
+
+  <!-- MAIN -->
+  <main id="app" class="hidden container">
+    <!-- Vistas -->
+    <section id="inicio" class="vista">
+      <h2>Bienvenido</h2>
+      <p id="welcomeMsg"></p>
+      <div class="cards">
+        <div class="card">
+          <h3>Gestión de Gastos</h3>
+          <p>Administra pagos y deudas</p>
+          <button onclick="mostrar('gastos')">Acceder</button>
+        </div>
+        <div class="card">
+          <h3>Reservas</h3>
+          <p>Gestiona áreas comunes</p>
+          <button onclick="mostrar('reservas')">Acceder</button>
+        </div>
+        <div class="card">
+          <h3>Reportes</h3>
+          <p>Visualiza informes</p>
+          <button onclick="mostrar('reportes')">Acceder</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="gastos" class="vista hidden">
+      <h2>Gestión de Gastos</h2>
+      <p>Vista de gastos comunes (depende del rol).</p>
+    </section>
+
+    <section id="reservas" class="vista hidden">
+      <h2>Reservas de Espacios</h2>
+      <p>Formulario de reservas disponible para residentes y conserjes.</p>
+    </section>
+
+    <section id="reportes" class="vista hidden">
+      <h2>Reportes</h2>
+      <p>Reportes disponibles para administración y directiva.</p>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Avisos</h3>
+      <div class="notice">
+        <b>Reunión de Comité</b><br>
+        Jueves 17 - 19:00 hrs
+      </div>
+    </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Desarrollado © 2025 - EspacioAdmin</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

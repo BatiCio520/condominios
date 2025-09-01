@@ -1,0 +1,112 @@
+/* ======== RESET ======== */
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f9; color: #333; }
+.hidden { display: none; }
+.error { color: red; }
+
+/* ======== HEADER ======== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c0392b;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  margin: 0 5px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button.active, nav button:hover {
+  background: #e74c3c;
+}
+
+/* ======== LAYOUT ======== */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.vista {
+  flex: 3;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  flex: 1;
+  margin-left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ======== CARDS ======== */
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+button {
+  background: #2980b9;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f6391;
+}
+
+/* ======== LOGIN ======== */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#login .card {
+  max-width: 300px;
+  width: 100%;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #2c3e50;
+  color: white;
+  margin-top: 20px;
+}
